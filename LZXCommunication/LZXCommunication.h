@@ -29,11 +29,11 @@
  *
  *  @param receivers  收件人列表
  *  @param content    短信内容
- *  @param delegateVc 要发送短信的控制器，需要遵守协议：<MFMessageComposeViewControllerDelegate>
+ *  @param delegateVc 要发送短信的控制器
  *
  *  @return 短信是否发送成功
  */
-+ (BOOL)messageToReceivers:(NSArray *)receivers content:(NSString *)content delegateVc:(UIViewController<MFMessageComposeViewControllerDelegate> *)delegateVc;
++ (BOOL)messageToReceivers:(NSArray *)receivers content:(NSString *)content delegateVc:(UIViewController *)delegateVc;
 
 
 #pragma mark - 发邮件
@@ -60,11 +60,11 @@
  *  @param attachment     附件数据
  *  @param attachmentName 附件名称
  *  @param attachmentType 附件MIME类型（如：image/jpeg）
- *  @param delegateVc     要发送邮件的控制器,需要遵守协议：<MFMailComposeViewControllerDelegate>
+ *  @param delegateVc     要发送邮件的控制器
  *
  *  @return 是否发送成功
  */
-+ (BOOL)mailToReceivers:(NSArray *)receivers copyers:(NSArray *)copyers secretors:(NSArray *)secretors theme:(NSString *)theme content:(NSString *)content contentIsHTML:(BOOL)contentIsHTML attachment:(NSData *)attachment attachmentName:(NSString *)attachmentName attachmentType:(NSString *)attachmentType showInViewController:(UIViewController<MFMailComposeViewControllerDelegate> *)delegateVc;
++ (BOOL)mailToReceivers:(NSArray *)receivers copyers:(NSArray *)copyers secretors:(NSArray *)secretors theme:(NSString *)theme content:(NSString *)content contentIsHTML:(BOOL)contentIsHTML attachment:(NSData *)attachment attachmentName:(NSString *)attachmentName attachmentType:(NSString *)attachmentType showInViewController:(UIViewController *)delegateVc;
 #warning 需要导入框架：MessageUI.framework?
 
 #pragma mark - 打电话

@@ -19,9 +19,9 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-+ (BOOL)messageToReceivers:(NSArray *)receivers content:(NSString *)content delegateVc:(UIViewController<MFMessageComposeViewControllerDelegate> *)delegateVc {
++ (BOOL)messageToReceivers:(NSArray *)receivers content:(NSString *)content delegateVc:(UIViewController *)delegateVc {
     
-    NSAssert(delegateVc, @"必须传入有效的调用该方法的控制器，必须遵守MSMessageComposeViewControllerDelegate协议");
+    NSAssert(delegateVc, @"必须传入有效的调用该方法的控制器");
     
     // 1. 判断用户设备能否发送短信
     if (![MFMessageComposeViewController canSendText]) {
@@ -40,7 +40,7 @@
     [messageVc setBody:content];
     
     // 4. 设置代理
-    messageVc.messageComposeDelegate = delegateVc;
+    messageVc.messageComposeDelegate = (UIViewController<MFMessageComposeViewControllerDelegate> *)delegateVc;
     
     // 5. 显示短信控制器
     [delegateVc presentViewController:messageVc animated:YES completion:^{
@@ -50,15 +50,19 @@
         // 代理控制器的回调方法
         Method delegateCallBackMethod = class_getInstanceMethod([delegateVc class], @selector(messageComposeViewController:didFinishWithResult:));
         
-        
-        NSAssert(delegateCallBackMethod, @"必须要实现控制器 <MFMessageComposeViewControllerDelegate> 代理的 的代理方法(方法实现中不需要写任何内容)：messageComposeViewController:didFinishWithResult:");
-        
         // 工具类中回调方法实现
         Method implementationMethod = class_getInstanceMethod(self, @selector(messageComposeViewController:didFinishWithResult:));
         IMP implementation = method_getImplementation(implementationMethod);
         
         // 设置控制器中的回调方法实现
-        method_setImplementation(delegateCallBackMethod, implementation);
+        
+        // 如果没有代理方法，那么就动态添加
+        if (!delegateCallBackMethod) {
+            class_addMethod([delegateVc class], @selector(messageComposeViewController:didFinishWithResult:), implementation, "v@:@i");
+        } else {
+        // 如果有代理方法，则替换其实现
+            method_setImplementation(delegateCallBackMethod, implementation);
+        }
         
     }];
     
@@ -111,9 +115,9 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-+ (BOOL)mailToReceivers:(NSArray *)receivers copyers:(NSArray *)copyers secretors:(NSArray *)secretors theme:(NSString *)theme content:(NSString *)content contentIsHTML:(BOOL)contentIsHTML attachment:(NSData *)attachment attachmentName:(NSString *)attachmentName attachmentType:(NSString *)attachmentType showInViewController:(UIViewController<MFMailComposeViewControllerDelegate> *)delegateVc {
++ (BOOL)mailToReceivers:(NSArray *)receivers copyers:(NSArray *)copyers secretors:(NSArray *)secretors theme:(NSString *)theme content:(NSString *)content contentIsHTML:(BOOL)contentIsHTML attachment:(NSData *)attachment attachmentName:(NSString *)attachmentName attachmentType:(NSString *)attachmentType showInViewController:(UIViewController *)delegateVc {
     
-    NSAssert(delegateVc, @"必须传入有效的调用该方法的控制器，必须遵守MFMailComposeViewControllerDelegate协议！");
+    NSAssert(delegateVc, @"必须传入有效的调用该方法的控制器！");
     
     // 1. 判断是否能发邮件
     if (![MFMailComposeViewController canSendMail]) {
@@ -140,8 +144,11 @@
     // 设置邮件附件
     [mailVc addAttachmentData:attachment mimeType:attachmentType fileName:attachmentName];
     
+    
+    
     // 4. 设置代理
-    mailVc.mailComposeDelegate  = delegateVc;
+    
+    mailVc.mailComposeDelegate  = (UIViewController<MFMailComposeViewControllerDelegate> *)delegateVc;
     
     // 5. 显示邮件控制器
     [delegateVc presentViewController:mailVc animated:YES completion:^{
@@ -153,14 +160,19 @@
         // 代理控制器的回调方法
         Method delegateCallBackMethod = class_getInstanceMethod([delegateVc class], @selector(mailComposeController:didFinishWithResult:error:));
         
-        NSAssert(delegateCallBackMethod, @"必须要实现控制器 <MFMailComposeViewControllerDelegate> 代理的 的代理方法(方法实现中不需要写任何内容):mailComposeController:didFinishWithResult:error:");
-        
         // 工具类中的回调方法实现
         Method implementationMethod = class_getInstanceMethod(self, @selector(mailComposeController:didFinishWithResult:error:));
         IMP implementation = method_getImplementation(implementationMethod);
         
         // 设置代理控制器中回调方法的实现
-        method_setImplementation(delegateCallBackMethod, implementation);
+        
+        // 如果没有代理方法，那么就动态添加
+        if (!delegateCallBackMethod) {
+            class_addMethod([delegateVc class], @selector(mailComposeController:didFinishWithResult:error:), implementation, "v@:@i@");
+        } else {
+        // 如果有代理方法，则替换其实现
+            method_setImplementation(delegateCallBackMethod, implementation);
+        }
         
     }];
     

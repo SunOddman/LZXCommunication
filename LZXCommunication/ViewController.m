@@ -10,21 +10,11 @@
 
 #import "LZXCommunication.h"
 
-@interface ViewController () <MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
+@interface ViewController ()
 
 @end
 
 @implementation ViewController
-
-#pragma mark - Delegate
-
-- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-    // 只需实现代理方法，不用写具体操作
-}
-
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
-    // 只需实现代理方法，不用写具体实现
-}
 
 #pragma mark - 调用工具类
 
