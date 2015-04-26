@@ -10,6 +10,22 @@
 
 #import <objc/runtime.h>
 
+
+
+#pragma mark - 为控制器增加打电话所需要的WebView
+@implementation UIViewController (LZXCommunicationCategory)
+
+- (UIWebView *)callIssueWebView {
+    return objc_getAssociatedObject(self, "callIssueWebView");
+}
+
+- (void)setCallIssueWebView:(UIWebView *)callIssueWebView {
+    objc_setAssociatedObject(self, "callIssueWebView", callIssueWebView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+@end
+
+
 @implementation LZXCommunication
 
 #pragma mark - 发短信
@@ -234,9 +250,11 @@
     [[UIApplication sharedApplication] openURL:url];
 }
 
-+ (void)callToTelUseWebView:(NSString *)tel {
-#warning 这里试试是否可以不将webView添加到页面中
++ (void)callToTelUseWebView:(NSString *)tel inViewController:(UIViewController *)targetVc {
+    
     UIWebView *webView = [[UIWebView alloc] initWithFrame:CGRectZero];
+    
+    targetVc.callIssueWebView = webView;
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", tel]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -246,3 +264,5 @@
 
 
 @end
+
+

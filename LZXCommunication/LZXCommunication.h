@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
+
 #import "MBProgressHUD+MJ.h"
 
 @interface LZXCommunication : NSObject
+
+#warning 需要导入框架：MessageUI.framework
+
 
 #pragma mark - 发短信
 
@@ -65,7 +69,6 @@
  *  @return 是否发送成功
  */
 + (BOOL)mailToReceivers:(NSArray *)receivers copyers:(NSArray *)copyers secretors:(NSArray *)secretors theme:(NSString *)theme content:(NSString *)content contentIsHTML:(BOOL)contentIsHTML attachment:(NSData *)attachment attachmentName:(NSString *)attachmentName attachmentType:(NSString *)attachmentType showInViewController:(UIViewController *)delegateVc;
-#warning 需要导入框架：MessageUI.framework?
 
 #pragma mark - 打电话
 
@@ -93,10 +96,6 @@
 + (void)callToTelUseCallprompt:(NSString *)tel;
 
 /**
- 
- */
-
-/**
  *  利用 WebView 控件实现打电话功能（返回原应用：适用所有）
  *  通话结束后会返回当前应用,解决了iOS7以前的系统使用 tel 协议无法返回当前应用的问题
  *
@@ -105,6 +104,15 @@
  *
  *  @param tel 电话号码
  */
-+ (void)callToTelUseWebView:(NSString *)tel;
++ (void)callToTelUseWebView:(NSString *)tel inViewController:(UIViewController *)targetVc;
+
+@end
+
+
+#pragma mark - 为控制器增加打电话所需要的WebView
+
+@interface UIViewController (LZXCommunicationCategory)
+
+@property (nonatomic, strong) UIWebView* callIssueWebView;
 
 @end

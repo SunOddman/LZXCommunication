@@ -10,8 +10,9 @@
 		771ABB121AED2D23004CEC44 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 771ABB0D1AED2D23004CEC44 /* MBProgressHUD.bundle */; };
 		771ABB131AED2D23004CEC44 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB0F1AED2D23004CEC44 /* MBProgressHUD.m */; };
 		771ABB141AED2D23004CEC44 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB111AED2D23004CEC44 /* MBProgressHUD+MJ.m */; };
-		771ABB181AED3A3D004CEC44 /* LZXCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB171AED3A3D004CEC44 /* LZXCommunication.m */; };
 		771ABB1A1AED3AC7004CEC44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771ABB191AED3AC7004CEC44 /* MessageUI.framework */; };
+		771ABB1D1AED401C004CEC44 /* LZXCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB1C1AED401C004CEC44 /* LZXCommunication.m */; };
+		771ABB221AED489B004CEC44 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB211AED489B004CEC44 /* README.md */; };
 		77C861CD1AED2C39006AC988 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C861CC1AED2C39006AC988 /* main.m */; };
 		77C861D01AED2C39006AC988 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C861CF1AED2C39006AC988 /* AppDelegate.m */; };
 		77C861D31AED2C39006AC988 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77C861D21AED2C39006AC988 /* ViewController.m */; };
@@ -37,9 +38,10 @@
 		771ABB0F1AED2D23004CEC44 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		771ABB101AED2D23004CEC44 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		771ABB111AED2D23004CEC44 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
-		771ABB161AED3A3D004CEC44 /* LZXCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXCommunication.h; sourceTree = "<group>"; };
-		771ABB171AED3A3D004CEC44 /* LZXCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXCommunication.m; sourceTree = "<group>"; };
 		771ABB191AED3AC7004CEC44 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		771ABB1B1AED401C004CEC44 /* LZXCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXCommunication.h; sourceTree = "<group>"; };
+		771ABB1C1AED401C004CEC44 /* LZXCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXCommunication.m; sourceTree = "<group>"; };
+		771ABB211AED489B004CEC44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		77C861C71AED2C39006AC988 /* LZXCommunication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LZXCommunication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C861CB1AED2C39006AC988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C861CC1AED2C39006AC988 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,8 +79,8 @@
 		771ABB151AED2D38004CEC44 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				771ABB161AED3A3D004CEC44 /* LZXCommunication.h */,
-				771ABB171AED3A3D004CEC44 /* LZXCommunication.m */,
+				771ABB1B1AED401C004CEC44 /* LZXCommunication.h */,
+				771ABB1C1AED401C004CEC44 /* LZXCommunication.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -114,6 +116,7 @@
 				77C861D41AED2C39006AC988 /* Main.storyboard */,
 				77C861D71AED2C39006AC988 /* Images.xcassets */,
 				77C861D91AED2C39006AC988 /* LaunchScreen.xib */,
+				771ABB211AED489B004CEC44 /* README.md */,
 				77C861CA1AED2C39006AC988 /* Supporting Files */,
 			);
 			path = LZXCommunication;
@@ -259,8 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				771ABB141AED2D23004CEC44 /* MBProgressHUD+MJ.m in Sources */,
-				771ABB181AED3A3D004CEC44 /* LZXCommunication.m in Sources */,
+				771ABB1D1AED401C004CEC44 /* LZXCommunication.m in Sources */,
 				77C861D31AED2C39006AC988 /* ViewController.m in Sources */,
+				771ABB221AED489B004CEC44 /* README.md in Sources */,
 				771ABB131AED2D23004CEC44 /* MBProgressHUD.m in Sources */,
 				77C861D01AED2C39006AC988 /* AppDelegate.m in Sources */,
 				77C861CD1AED2C39006AC988 /* main.m in Sources */,

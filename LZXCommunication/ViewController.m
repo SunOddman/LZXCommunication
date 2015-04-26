@@ -16,6 +16,14 @@
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.callIssueWebView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
+    UIWebView *aa = self.callIssueWebView;
+    NSLog(@"%@", aa);
+}
+
 #pragma mark - 调用工具类
 
 // 在触摸事件中调用方法
@@ -27,12 +35,12 @@
     
     // 发邮件
 //    [self sendMessage1];
-    [self sendMessage2];
+//    [self sendMessage2];
     
     // 打电话
 //    [self call1];
 //    [self call2];
-//    [self call3];
+    [self call3];
     
 }
 
@@ -66,12 +74,12 @@
 
 - (void)call2 {
     // 越狱可用
-    [LZXCommunication callToTelUseCallprompt:@"10086"];
+    [LZXCommunication callToTelUseCallprompt:@"10086" ];
 }
 
 - (void)call3 {
-    // 这个方法功能有待完善
-    [LZXCommunication callToTelUseWebView:@"10086"];
+    // 这个方法功能需要测试
+    [LZXCommunication callToTelUseWebView:@"10086" inViewController:self];
 }
 
 
