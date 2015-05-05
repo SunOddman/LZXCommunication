@@ -16,15 +16,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.callIssueWebView = [[UIWebView alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
-    UIWebView *aa = self.callIssueWebView;
-    NSLog(@"%@", aa);
-}
-
-#pragma mark - 调用工具类
+#pragma mark - 执行功能
 
 // 在触摸事件中调用方法
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -38,10 +30,9 @@
 //    [self sendMessage2];
     
     // 打电话
-//    [self call1];
+    [self call1];
 //    [self call2];
-    [self call3];
-    
+//    [self call3];
 }
 
 #pragma mark - 调用工具类

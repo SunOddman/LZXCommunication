@@ -113,9 +113,7 @@
     }
     
     // 提示操作结果
-    MBProgressHUD *alert = [MBProgressHUD showMessage:resultAlert];
-    // 0.5m后移除提示
-    [alert hide:YES afterDelay:1.0];
+    [SVProgressHUD showImage:nil status:resultAlert maskType:SVProgressHUDMaskTypeGradient];
     
     
     // 关闭窗口
@@ -226,9 +224,7 @@
     }
     
     // 提示操作结果
-    MBProgressHUD *alert = [MBProgressHUD showMessage:resultAlert];
-    // 1.0m后移除提示
-    [alert hide:YES afterDelay:1.0];
+    [SVProgressHUD showImage:nil status:resultAlert maskType:SVProgressHUDMaskTypeGradient];
     
     // 关闭窗口
     //[self performSelector:@selector(dismissViewControllerAnimated:completion:) withObject:@(YES) withObject:nil]; // 这种做法不可行，YES包装成对象后会变成一个很大的数字
@@ -239,9 +235,16 @@
 #pragma mark - 打电话
 
 + (void)callToTel:(NSString *)tel {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", tel]];
+        
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", tel]];
+//    
+//    [[UIApplication sharedApplication] openURL:url];
     
-    [[UIApplication sharedApplication] openURL:url];
+#ifdef DEBUG
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0) {
+        NSLog(@"Warning: %s would back to current App only available at least iOS8.0, use [%@ callToTelUseWebView:inViewController:] instead in low device version", __FUNCTION__, [self class]);
+    }
+#endif
 }
 
 + (void)callToTelUseCallprompt:(NSString *)tel {

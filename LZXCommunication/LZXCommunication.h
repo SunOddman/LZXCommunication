@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
-#import "MBProgressHUD+MJ.h"
+#import "SVProgressHUD.h"
 
 @interface LZXCommunication : NSObject
 
-#warning 需要导入框架：MessageUI.framework
+#warning 需要导入系统框架：MessageUI.framework
 
 
 #pragma mark - 发短信
@@ -81,7 +81,18 @@
  *
  *  @param tel 电话号码
  */
-+ (void)callToTel:(NSString *)tel;
++ (void)callToTel:(NSString *)tel NS_AVAILABLE_IOS(8_0);
+
+/**
+ *  利用 WebView 控件实现打电话功能（返回原应用：适用所有）
+ *  通话结束后会返回当前应用,解决了iOS7以前的系统使用 tel 协议无法返回当前应用的问题
+ *
+ *  注意：
+ *      要防止这个 WebView控件在添加到页面中后覆盖了页面的内容
+ *
+ *  @param tel 电话号码
+ */
++ (void)callToTelUseWebView:(NSString *)tel inViewController:(UIViewController *)targetVc;
 
 /**
  *  利用 telprompt 协议打电话（返回原应用：越狱可用）
@@ -94,17 +105,6 @@
  *  @param tel 电话号码
  */
 + (void)callToTelUseCallprompt:(NSString *)tel;
-
-/**
- *  利用 WebView 控件实现打电话功能（返回原应用：适用所有）
- *  通话结束后会返回当前应用,解决了iOS7以前的系统使用 tel 协议无法返回当前应用的问题
- *
- *  注意：
- *      要防止这个 WebView控件在添加到页面中后覆盖了页面的内容
- *
- *  @param tel 电话号码
- */
-+ (void)callToTelUseWebView:(NSString *)tel inViewController:(UIViewController *)targetVc;
 
 @end
 
