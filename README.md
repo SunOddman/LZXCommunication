@@ -149,3 +149,6 @@
     [LZXCommunication messageToReceivers:@[@"10010", @"10086"] content:@"查询话费" delegateVc:self];
     ```
     即可实现给10010和10086发送内容为“查询话费”的短信
+
+## Apatch
+###[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
