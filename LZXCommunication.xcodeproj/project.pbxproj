@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		771ABB1A1AED3AC7004CEC44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771ABB191AED3AC7004CEC44 /* MessageUI.framework */; };
 		771ABB1D1AED401C004CEC44 /* LZXCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB1C1AED401C004CEC44 /* LZXCommunication.m */; };
-		771ABB221AED489B004CEC44 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB211AED489B004CEC44 /* README.md */; };
 		775F2CA21AFF54FA00FD640B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 775F2CA11AFF54FA00FD640B /* LICENSE */; };
 		776C29231AF05CC100DD20BD /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776C291E1AF05CC100DD20BD /* SVIndefiniteAnimatedView.m */; };
 		776C29241AF05CC100DD20BD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 776C29201AF05CC100DD20BD /* SVProgressHUD.bundle */; };
@@ -37,7 +36,6 @@
 		771ABB191AED3AC7004CEC44 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		771ABB1B1AED401C004CEC44 /* LZXCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXCommunication.h; sourceTree = "<group>"; };
 		771ABB1C1AED401C004CEC44 /* LZXCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXCommunication.m; sourceTree = "<group>"; };
-		771ABB211AED489B004CEC44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		775F2CA11AFF54FA00FD640B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		776C291D1AF05CC100DD20BD /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		776C291E1AF05CC100DD20BD /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				77C861D41AED2C39006AC988 /* Main.storyboard */,
 				77C861D71AED2C39006AC988 /* Images.xcassets */,
 				77C861D91AED2C39006AC988 /* LaunchScreen.xib */,
-				771ABB211AED489B004CEC44 /* README.md */,
 				775F2CA11AFF54FA00FD640B /* LICENSE */,
 				77C861CA1AED2C39006AC988 /* Supporting Files */,
 			);
@@ -269,7 +266,6 @@
 			files = (
 				771ABB1D1AED401C004CEC44 /* LZXCommunication.m in Sources */,
 				77C861D31AED2C39006AC988 /* ViewController.m in Sources */,
-				771ABB221AED489B004CEC44 /* README.md in Sources */,
 				776C29251AF05CC100DD20BD /* SVProgressHUD.m in Sources */,
 				77C861D01AED2C39006AC988 /* AppDelegate.m in Sources */,
 				77C861CD1AED2C39006AC988 /* main.m in Sources */,
