@@ -7,6 +7,8 @@
   
   项目中添加工具类： LZXCommunication.h & LZXCommunication
   
+  导入 LZXCommunication.h
+
   调用如下类方法实现响应功能：
   
 ### 打电话
