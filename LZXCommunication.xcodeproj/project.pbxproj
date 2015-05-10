@@ -10,6 +10,7 @@
 		771ABB1A1AED3AC7004CEC44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771ABB191AED3AC7004CEC44 /* MessageUI.framework */; };
 		771ABB1D1AED401C004CEC44 /* LZXCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB1C1AED401C004CEC44 /* LZXCommunication.m */; };
 		771ABB221AED489B004CEC44 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB211AED489B004CEC44 /* README.md */; };
+		775F2CA21AFF54FA00FD640B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 775F2CA11AFF54FA00FD640B /* LICENSE */; };
 		776C29231AF05CC100DD20BD /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776C291E1AF05CC100DD20BD /* SVIndefiniteAnimatedView.m */; };
 		776C29241AF05CC100DD20BD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 776C29201AF05CC100DD20BD /* SVProgressHUD.bundle */; };
 		776C29251AF05CC100DD20BD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 776C29221AF05CC100DD20BD /* SVProgressHUD.m */; };
@@ -37,6 +38,7 @@
 		771ABB1B1AED401C004CEC44 /* LZXCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXCommunication.h; sourceTree = "<group>"; };
 		771ABB1C1AED401C004CEC44 /* LZXCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXCommunication.m; sourceTree = "<group>"; };
 		771ABB211AED489B004CEC44 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		775F2CA11AFF54FA00FD640B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		776C291D1AF05CC100DD20BD /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
 		776C291E1AF05CC100DD20BD /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
 		776C291F1AF05CC100DD20BD /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				77C861D71AED2C39006AC988 /* Images.xcassets */,
 				77C861D91AED2C39006AC988 /* LaunchScreen.xib */,
 				771ABB211AED489B004CEC44 /* README.md */,
+				775F2CA11AFF54FA00FD640B /* LICENSE */,
 				77C861CA1AED2C39006AC988 /* Supporting Files */,
 			);
 			path = LZXCommunication;
@@ -245,6 +248,7 @@
 				77C861D61AED2C39006AC988 /* Main.storyboard in Resources */,
 				77C861DB1AED2C39006AC988 /* LaunchScreen.xib in Resources */,
 				77C861D81AED2C39006AC988 /* Images.xcassets in Resources */,
+				775F2CA21AFF54FA00FD640B /* LICENSE in Resources */,
 				776C29241AF05CC100DD20BD /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
