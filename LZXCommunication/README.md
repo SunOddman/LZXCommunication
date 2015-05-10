@@ -3,7 +3,7 @@
 
 ## Usage
 
-  ### Warning 需要导入系统框架：MessageUI.framework
+  ### 注意： 需要导入系统框架：MessageUI.framework
   
   项目中添加工具类： LZXCommunication.h & LZXCommunication
   
