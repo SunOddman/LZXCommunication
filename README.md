@@ -3,7 +3,7 @@
 
 ## Usage
 
-  ### 注意： 需要导入系统框架：MessageUI.framework
+### 注意： 需要导入系统框架：MessageUI.framework
   
   项目中添加工具类： LZXCommunication.h & LZXCommunication
   
@@ -150,5 +150,5 @@
     ```
     即可实现给10010和10086发送内容为“查询话费”的短信
 
-## Apatch
-###[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+## License
+####[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
