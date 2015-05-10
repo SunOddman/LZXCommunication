@@ -1,5 +1,5 @@
 # [LZXCommunication](https://github.com/SunOddman/LZXCommunication)
-快速实现 发短信，发邮件，打电话 功能，无需更多代码，一行足矣！
+快速实现 发短信，发邮件，打电话 功能，无需更多代码，一行足矣!
 
 ## Usage
 
