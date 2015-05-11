@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7703ECD81B00FFF90015DB5B /* Objective-C.gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7703ECD71B00FFF90015DB5B /* Objective-C.gitignore */; };
 		771ABB1A1AED3AC7004CEC44 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771ABB191AED3AC7004CEC44 /* MessageUI.framework */; };
 		771ABB1D1AED401C004CEC44 /* LZXCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = 771ABB1C1AED401C004CEC44 /* LZXCommunication.m */; };
 		775F2CA21AFF54FA00FD640B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 775F2CA11AFF54FA00FD640B /* LICENSE */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7703ECD71B00FFF90015DB5B /* Objective-C.gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Objective-C.gitignore"; sourceTree = "<group>"; };
 		771ABB191AED3AC7004CEC44 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		771ABB1B1AED401C004CEC44 /* LZXCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXCommunication.h; sourceTree = "<group>"; };
 		771ABB1C1AED401C004CEC44 /* LZXCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXCommunication.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		77C861BE1AED2C39006AC988 = {
 			isa = PBXGroup;
 			children = (
+				7703ECD71B00FFF90015DB5B /* Objective-C.gitignore */,
 				775F2CA71AFF80FA00FD640B /* README.md */,
 				771ABB191AED3AC7004CEC44 /* MessageUI.framework */,
 				77C861C91AED2C39006AC988 /* LZXCommunication */,
@@ -249,6 +252,7 @@
 				77C861DB1AED2C39006AC988 /* LaunchScreen.xib in Resources */,
 				77C861D81AED2C39006AC988 /* Images.xcassets in Resources */,
 				775F2CA21AFF54FA00FD640B /* LICENSE in Resources */,
+				7703ECD81B00FFF90015DB5B /* Objective-C.gitignore in Resources */,
 				776C29241AF05CC100DD20BD /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
